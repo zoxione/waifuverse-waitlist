@@ -1,11 +1,16 @@
 {
-  "name": "webpack_tailwind",
-  "version": "1.0.0",
+  "name": "waifuverse-waitlist",
+  "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
+  "repository": {
+    "url": "git+https://github.com/zoxione/waifuverse-waitlist.git"
+  },
   "scripts": {
     "start": "webpack serve --mode=development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +20,7 @@
     "@babel/preset-env": "^7.14.7",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.3.2",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.1",
@@ -23,7 +29,7 @@
     "tailwindcss": "^2.2.4",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1"
